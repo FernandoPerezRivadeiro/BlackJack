@@ -1,0 +1,9 @@
+12,Yanko
+19,Fernando
+8,Stephen
+7,Paulo
+2,McGuasacaca
+6,Rafa
+12,Vanessa
+
+

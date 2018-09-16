@@ -1,0 +1,51 @@
+#opponentCards img{
+    width: 100px;
+    }
+    #dealerCards img{
+     width: 100px;
+    }
+    
+    #myCards img{
+     width: 100px;
+    }
+   
+    #theTable, #form{
+         font-size: 21px;
+        color: black;
+         font-family: Arial;
+    }
+   
+   table td{
+       padding: 10px;
+       border-style: groove;
+       border-color: rgba(31, 34, 31, 0.2);
+       background-color: rgba(194, 210, 193, 0.5);
+       width: 400px;
+       height: 247px;
+       }
+    
+    button{
+        border-radius: 25px;
+    }
+    
+    a{
+        font-size: 21px;
+        color: rgb(45, 129, 121);
+         font-family: Arial;
+    }
+    
+    p{
+        font-size: 21px;
+        color: black;
+         font-family: Arial;
+    }
+    
+    body{
+        background-image: url("backg.jpg");
+        background-size: cover;
+        }
+       
+   table{
+     border-collapse: collapse;
+     margin-left: 8%;
+   }

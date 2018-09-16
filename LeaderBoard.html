@@ -1,0 +1,84 @@
+<html>
+ <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+    
+        $.get("Leaders.txt",displayBoard);
+    
+    });
+       
+       
+    function displayBoard(data, status)
+       {
+        if (status == "success") {
+            var s = data.split("\n");
+            var collator = new Intl.Collator(undefined, {numeric: true, sensitivity: 'base'});
+            s.sort(collator.compare);
+            s.sort(function(a, b){return b-a;});
+            var r = "";
+            var d = "";
+            for(i = 0; i < 10; i++)
+            {
+            d = s[i].split(",");
+            r = "<td><p>" + d[1] + "</p></td><td><p>" + d[0] + "</p></td>";
+            $("<tr/>").append(r).appendTo("#result tbody");
+            
+            }
+        }
+       }
+       
+    </script>
+    
+    <style>
+       #result{
+      
+       margin-left: 20%;
+       border-style: groove;
+       border-color: rgba(31, 34, 31, 0.2);
+       background-color: rgba(194, 210, 193, 0.5);
+       padding: 10px;
+       width: 900px;
+       height: 600px;
+    }
+    
+    th{
+     text-align: center;
+    }
+    
+    table td{
+       padding: 10px;
+       border-style: groove;
+       border-color: rgba(31, 34, 31, 0.2);
+       background-color: rgba(194, 210, 193, 0.5);
+       }
+    
+     body{
+        background-image: url("backg.jpg");
+        background-size: cover;
+        }
+        
+         p{
+        font-size: 21px;
+        color: black;
+         font-family: Arial;
+    }
+    
+    </style>
+ </head>
+<body>
+    <table id="result">
+    <thead>
+     <tr>
+      <th colspan=3><p>LEADERBOARD</p></th>
+     </tr>
+        <tr>
+            <th><p>NAME</p></th><th><p>SCORE</p></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table> 
+    </body>
+<html>

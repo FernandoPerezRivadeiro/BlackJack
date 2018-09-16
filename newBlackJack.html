@@ -1,0 +1,88 @@
+<html>
+ <head>
+   <link rel="stylesheet" type="text/css" href="BlackJackStyle.css">
+  <!-- all the style thing for the table -->  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="BlackJackScript.js">
+        </script>
+ </head>
+<body>
+ 
+ 
+ 
+ 
+    <table>
+        <tr>
+            <td colspan=3>
+            <p>Dealer's card values:<span id="numberDealer"></span></p>
+            <p>Dealer Cards</p>
+                <div id="dealerCards" align="middle"> 
+                 
+                <!--here's where all the cards will appear for the dealer -->
+                 
+                </div>
+               
+            </td>
+        </tr>
+        <tr>
+            <td>
+             <p>Your Cards</p>
+             <p>Your card values: <span id="number"></span></p>
+                <div id="myCards">
+                <!--here's where all the cards will appear for the player -->
+                </div>
+                 
+            </td>
+            <td><p>
+                <div id="theTable">
+                <p style="text-align: center">WELCOME TO BLACKJACK!</p>
+                <p style="text-align: center">HEADS UP DISPLAY!</p>
+                <span id="speakAI"></span><br>
+                <span id="speakDealer"></span><br>
+                <span id="winner"></span><br>
+                <span></span>
+                <label for="wins">Wins: </label>
+                <span id="wins"></span><br>
+                <label for="losses">Losses: </label>
+                <span id="losses"></span><br>
+                <!--here's where all the winning history --> 
+                </div>
+                </p>
+            </td>
+            <td>
+            <p>Opponent</p>
+            <p>Opponent's card values: <span id="numberAI"></span></p>
+                <div id="opponentCards">
+                <!--here's where all the cards will appear for the AI -->
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan=2>
+                <button id="get" onclick="getCards();">Start game</button>
+                <button id="hit" onclick="hitMe();">Hit</button>
+                <button id="stand" onclick="standUser();">Stand</button>
+                <button id="again" onclick="restarter();">Play again</button>
+                <button id="bye" onclick="makeAppear();">Quit</button><p></p>
+                <a id="leader" href="LeaderBoard.html">GO TO THE LEADERBOARD</a>
+                
+            </td>
+            <td>
+            <div id="form">
+            <p>Thank you for playing BlackJack!</p>
+            <p>Write your Name!</p>
+            <input type="text" id="name"> <p></p>
+            <label for="userScore">YOUR SCORE: </label>
+            <span id="userScore"></span><br>
+            <button id="submit" onclick="ajaxWay();">Submit</button>
+            </div>
+            </td>
+        </tr>
+    </table>
+
+    </body>
+<hr>
+<footer>
+ <p>DEVELOPED BY FERNANDO PEREZ RIVADEIRO</p>
+</footer>
+<html>
